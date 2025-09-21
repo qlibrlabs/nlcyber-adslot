@@ -1,0 +1,74 @@
+{
+  "name": "@nlcyber/adslot",
+  "version": "1.0.0",
+  "description": "NLCyber AdSlot React component for third-party integration",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "browser": "dist/nlcyber-adslot.js",
+  "unpkg": "dist/nlcyber-adslot.js",
+  "jsdelivr": "dist/nlcyber-adslot.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "build:cdn": "rollup -c rollup.cdn.config.js",
+    "build:all": "npm run build && npm run build:cdn",
+    "dev": "rollup -c -w",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build:all && npm run test",
+    "release": "npm version patch && npm publish"
+  },
+  "keywords": [
+    "react",
+    "advertisement",
+    "adslot",
+    "nlcyber",
+    "component",
+    "advertising",
+    "typescript"
+  ],
+  "author": "NLCyber <support@nlcyber.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nlcyber/nlcyber-adslot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nlcyber/nlcyber-adslot/issues"
+  },
+  "homepage": "https://github.com/nlcyber/nlcyber-adslot#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/jest-dom": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0",
+    "rollup": "^4.9.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.3.3"
+  }
+}

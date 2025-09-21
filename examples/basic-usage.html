@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLCyber AdSlot - Basic Usage Example</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+        }
+        .main-content {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .sidebar {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .ad-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .ad-container h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>NLCyber AdSlot Integration Example</h1>
+        <p>This page demonstrates how to integrate NLCyber ads into your website.</p>
+    </div>
+
+    <div class="content">
+        <div class="main-content">
+            <h2>Main Content Area</h2>
+            
+            <div class="ad-container">
+                <h3>Homepage Top Banner</h3>
+                <div id="homepage-ad"></div>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="ad-container">
+                <h3>Mid-Content Banner</h3>
+                <div id="mid-content-ad"></div>
+            </div>
+
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+            
+            <div class="ad-container">
+                <h4>Sidebar Ad</h4>
+                <div id="sidebar-ad"></div>
+            </div>
+
+            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+            <div class="ad-container">
+                <h4>Another Sidebar Ad</h4>
+                <div id="sidebar-ad-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load React and ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- Load the NLCyber AdSlot component -->
+    <script src="https://unpkg.com/@nlcyber/adslot@latest/dist/index.js"></script>
+
+    <script>
+        // Wait for the page to load
+        document.addEventListener('DOMContentLoaded', function() {
+            const { AdSlot } = window.nlcyberAdslot;
+            const { createElement } = React;
+            const { render } = ReactDOM;
+
+            // Render homepage top ad
+            render(
+                createElement(AdSlot, { 
+                    placement: 'homepage_top',
+                    debug: true 
+                }),
+                document.getElementById('homepage-ad')
+            );
+
+            // Render mid-content ad
+            render(
+                createElement(AdSlot, { 
+                    placement: 'homepage_top',
+                    width: 728,
+                    height: 90,
+                    debug: true 
+                }),
+                document.getElementById('mid-content-ad')
+            );
+
+            // Render sidebar ads
+            render(
+                createElement(AdSlot, { 
+                    placement: 'article_sidebar',
+                    debug: true 
+                }),
+                document.getElementById('sidebar-ad')
+            );
+
+            render(
+                createElement(AdSlot, { 
+                    placement: 'article_sidebar',
+                    debug: true 
+                }),
+                document.getElementById('sidebar-ad-2')
+            );
+        });
+    </script>
+</body>
+</html>
