@@ -184,7 +184,7 @@ When reporting issues, include:
 ### Contact Information
 
 - 📧 Email: support@nlcyber.com
-- 🐛 Issues: [GitHub Issues](https://github.com/nlcyber/nlcyber-adslot/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/qlibrlabs/nlcyber-adslot/issues)
 - 📖 Documentation: [NLCyber Docs](https://docs.nlcyber.com)
 
 ## Testing Checklist

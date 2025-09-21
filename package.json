@@ -41,12 +41,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nlcyber/nlcyber-adslot.git"
+    "url": "https://github.com/qlibrlabs/nlcyber-adslot.git"
   },
   "bugs": {
-    "url": "https://github.com/nlcyber/nlcyber-adslot/issues"
+    "url": "https://github.com/qlibrlabs/nlcyber-adslot/issues"
   },
-  "homepage": "https://github.com/nlcyber/nlcyber-adslot#readme",
+  "homepage": "https://github.com/qlibrlabs/nlcyber-adslot#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
