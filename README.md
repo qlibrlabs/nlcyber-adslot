@@ -1,4 +1,4 @@
-# @nlcyber/adslot
+# nlcyber-adslot
 
 A React component for displaying NLCyber advertisements on third-party websites. This package provides an easy-to-integrate ad slot component with built-in tracking, frequency capping, and responsive design.
 
@@ -16,18 +16,18 @@ A React component for displaying NLCyber advertisements on third-party websites.
 ## Installation
 
 ```bash
-npm install @nlcyber/adslot
+npm install nlcyber-adslot
 # or
-yarn add @nlcyber/adslot
+yarn add nlcyber-adslot
 # or
-pnpm add @nlcyber/adslot
+pnpm add nlcyber-adslot
 ```
 
 ## Quick Start
 
 ```tsx
 import React from 'react';
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 
 function App() {
   return (
@@ -46,7 +46,7 @@ export default App;
 ### Simple Integration
 
 ```tsx
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 
 // Basic ad slot
 <AdSlot placement="homepage_top" />
@@ -62,7 +62,7 @@ import { AdSlot } from '@nlcyber/adslot';
 ### Advanced Configuration
 
 ```tsx
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 
 <AdSlot
   placement="homepage_top"
@@ -109,7 +109,7 @@ import { AdSlot } from '@nlcyber/adslot';
 
 ```tsx
 // pages/index.tsx
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 
 export default function HomePage() {
   return (
@@ -132,7 +132,7 @@ export default function HomePage() {
 ```tsx
 // src/App.js
 import React from 'react';
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 import './App.css';
 
 function App() {
@@ -165,7 +165,7 @@ export default App;
 ```tsx
 // src/pages/index.js
 import React from 'react';
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 import Layout from '../components/layout';
 
 const IndexPage = () => {
@@ -191,7 +191,7 @@ export default IndexPage;
 function enqueue_nlcyber_adslot() {
     wp_enqueue_script('react');
     wp_enqueue_script('react-dom');
-    wp_enqueue_script('nlcyber-adslot', 'https://unpkg.com/@nlcyber/adslot/dist/index.js');
+    wp_enqueue_script('nlcyber-adslot', 'https://unpkg.com/nlcyber-adslot/dist/index.js');
 }
 add_action('wp_enqueue_scripts', 'enqueue_nlcyber_adslot');
 ```
@@ -288,7 +288,7 @@ The component automatically handles:
 Full TypeScript definitions are included:
 
 ```tsx
-import { AdSlot, AdSlotProps, AdStreamPublicAd } from '@nlcyber/adslot';
+import { AdSlot, AdSlotProps, AdStreamPublicAd } from 'nlcyber-adslot';
 
 interface MyComponentProps {
   adPlacement: string;
