@@ -47,9 +47,16 @@ describe('AdSlot Component', () => {
       pubDate: '2025-01-01T00:00:00Z'
     };
 
+    // Mock the ad fetch call
     mockFetch.mockResolvedValueOnce({
       ok: true,
       json: async () => [mockAd]
+    });
+
+    // Mock the impression tracking call
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ success: true })
     });
 
     render(<AdSlot placement="homepage_top" />);
