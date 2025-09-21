@@ -26,12 +26,14 @@ export default [
       typescript({
         tsconfig: './tsconfig.json',
         exclude: ['**/*.test.*', '**/*.spec.*'],
+        declaration: true,
+        declarationDir: './dist',
       }),
     ],
     external: ['react', 'react-dom'],
   },
   {
-    input: 'dist/index.d.ts',
+    input: 'src/index.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts()],
     external: [/\.css$/],
