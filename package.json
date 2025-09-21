@@ -1,6 +1,7 @@
 {
   "name": "@nlcyber/adslot",
   "version": "1.0.0",
+  "type": "module",
   "description": "NLCyber AdSlot React component for third-party integration",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
