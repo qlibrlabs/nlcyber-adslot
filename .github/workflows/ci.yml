@@ -30,7 +30,10 @@ jobs:
       run: npm ci
       
     - name: Run TypeScript check
-      run: npx tsc --noEmit
+      run: |
+        echo "Running TypeScript check..."
+        npm run type-check
+        echo "TypeScript check completed successfully"
       
     - name: Run build
       run: npm run build
