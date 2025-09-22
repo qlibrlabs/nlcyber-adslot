@@ -26,7 +26,7 @@ The main React component for displaying NLCyber advertisements.
 ### Example Usage
 
 ```tsx
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 
 // Basic usage
 <AdSlot placement="homepage_top" />

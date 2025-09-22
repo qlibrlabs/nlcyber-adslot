@@ -1,6 +1,6 @@
 // src/App.jsx - Create React App example
 import React, { useState } from 'react';
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 import './App.css';
 
 function App() {

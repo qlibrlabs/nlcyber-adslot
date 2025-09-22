@@ -60,7 +60,7 @@ npm install @types/react @types/react-dom
 ```
 
 ```tsx
-import { AdSlot, AdSlotProps } from '@nlcyber/adslot';
+import { AdSlot, AdSlotProps } from 'nlcyber-adslot';
 ```
 
 ### Styling Issues
@@ -116,7 +116,7 @@ localStorage.clear();
 ```tsx
 import { lazy, Suspense } from 'react';
 
-const AdSlot = lazy(() => import('@nlcyber/adslot').then(module => ({ default: module.AdSlot })));
+const AdSlot = lazy(() => import('nlcyber-adslot').then(module => ({ default: module.AdSlot })));
 
 function App() {
   return (

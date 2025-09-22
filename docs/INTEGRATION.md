@@ -7,11 +7,11 @@ This guide covers different ways to integrate the NLCyber AdSlot component into 
 ### 1. NPM Package (Recommended for React projects)
 
 ```bash
-npm install @nlcyber/adslot
+npm install nlcyber-adslot
 ```
 
 ```tsx
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 
 function App() {
   return <AdSlot placement="homepage_top" />;
@@ -26,7 +26,7 @@ function App() {
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
 <!-- Include NLCyber AdSlot -->
-<script src="https://unpkg.com/@nlcyber/adslot@latest/dist/nlcyber-adslot.js"></script>
+<script src="https://unpkg.com/nlcyber-adslot@latest/dist/nlcyber-adslot.js"></script>
 
 <script>
   const { AdSlot } = window.nlcyberAdslot;
@@ -47,7 +47,7 @@ Download the built files from GitHub releases and host them yourself.
 
 ```tsx
 // pages/index.tsx
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 
 export default function HomePage() {
   return (
@@ -64,7 +64,7 @@ export default function HomePage() {
 ```jsx
 // src/App.js
 import React from 'react';
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 
 function App() {
   return (
@@ -82,7 +82,7 @@ export default App;
 ```tsx
 // src/pages/index.js
 import React from 'react';
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 import Layout from '../components/layout';
 
 const IndexPage = () => {
@@ -106,7 +106,7 @@ For WordPress sites, you can use the CDN method or create a custom plugin.
 function enqueue_nlcyber_adslot() {
     wp_enqueue_script('react', 'https://unpkg.com/react@18/umd/react.production.min.js');
     wp_enqueue_script('react-dom', 'https://unpkg.com/react-dom@18/umd/react-dom.production.min.js');
-    wp_enqueue_script('nlcyber-adslot', 'https://unpkg.com/@nlcyber/adslot@latest/dist/nlcyber-adslot.js');
+    wp_enqueue_script('nlcyber-adslot', 'https://unpkg.com/nlcyber-adslot@latest/dist/nlcyber-adslot.js');
 }
 add_action('wp_enqueue_scripts', 'enqueue_nlcyber_adslot');
 ```

@@ -1,6 +1,6 @@
 // pages/index.tsx - Next.js example
 import React from 'react';
-import { AdSlot } from '@nlcyber/adslot';
+import { AdSlot } from 'nlcyber-adslot';
 import Head from 'next/head';
 
 export default function HomePage() {
@@ -91,7 +91,8 @@ export default function HomePage() {
         </footer>
       </div>
 
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .container {
           max-width: 1200px;
           margin: 0 auto;
@@ -175,7 +176,8 @@ export default function HomePage() {
           border: 1px solid #d0d0d0;
           border-radius: 4px;
         }
-      `}</style>
+        `
+      }} />
     </>
   );
 }
